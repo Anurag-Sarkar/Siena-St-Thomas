@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,body {
+  width : 100%;
+  height: 100%;
+}
+.page1{
+    width: 100%;
+    height: 100%;
+}
+.page1 .nav{
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    padding: 0px 100px;
+    justify-content: space-between;
+    animation-name: nav;
+    animation-duration: 1s;    
+}
+.page1 .nav .nav-left{
+    display: flex;
+    align-items: center;
+}
+.page1 .nav .nav-right{
+    color:#aa97ff;
+    display: flex;
+}
+.page1 .nav .nav-right p{
+    transition: 0.3s;
+}
+.page1 .nav .nav-right p:hover{
+    cursor: pointer;
+    color: #6E5AD1;
+}
+.nav .nav-left h1{
+    color:#9e8bff;
+
+}
+.nav .nav-left i{
+    color: #6E5AD1;
+    font-size: 40px;
+    margin-right: 10px;
+}
+.nav .nav-right p{
+    font-size: 20px;
+    padding: 0px 40px;
+}
+.content{
+    display: flex;
+    width: 100%;
+    height: 200%;
+}
+.content-left{
+    padding-top: 150px;
+    opacity: 1;
+    padding-left: 100px;
+    width: 40%;
+    height: 100%;
+    animation-name: left;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    opacity: 0;
+    animation-fill-mode: both;
+}
+.content-right{
+    padding-left: 100px;
+    opacity: 1;
+    width: 50%;
+    height: 100%;
+    animation-name: right;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    opacity: 0;
+    animation-fill-mode: both;
+}
+.content-left h1{
+    margin-bottom: 40px;
+    font-size: 60px;
+    color: #8972ef;
+}
+.content-left p{
+    font-size: 20px;
+    color: #bbb5d3;
+    margin-bottom: 40px;
+}
+.butons{
+    display: flex;
+    align-items: center;
+}
+.butons p{
+    margin-right: 10px;
+    color: rgb(180, 180, 180);
+    margin-bottom: 0px;
+}
+.butons i{
+    font-size: 40px;
+    color: rgb(180, 180, 180);
+
+}
+.butons button{
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    background-color: #6E5AD1;
+    border: none;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+
+@keyframes nav {
+    from {
+        transform: translate(0,-50px);
+        opacity: 0;
+    } to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes left {
+    from {
+        transform: translate(-100px,0);
+        opacity: 0;
+    } to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes right {
+    from {
+        transform: translate(100px,0);
+        opacity: 0;
+    } to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    
+}
